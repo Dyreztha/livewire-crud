@@ -144,4 +144,11 @@ class Employee extends Component
     {
         $this->resetPage();
     }
+
+    public function clear()
+{
+    $this->reset(['nama', 'email', 'alamat', 'employee_id']);
+    $this->resetValidation();
+}
+
 }

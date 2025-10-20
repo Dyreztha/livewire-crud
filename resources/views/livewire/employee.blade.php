@@ -48,14 +48,15 @@
                             <button type="button" class="btn btn-secondary" wire:click="cancel">BATAL</button>
                         @else
                             <button type="button" class="btn btn-primary" wire:click="store">SIMPAN</button>
+                            <button type="button" class="btn btn-secondary" wire:click="clear">Clear</button>
                         @endif
                     </div>
                 </div>
             </form>
         </div>
 
-        <h1>Data Pegawai</h1>
         <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <h1>Data Pegawai</h1>
             
             <div class="pb-3">
                 @if (count($employeeSelectedId))
@@ -126,7 +127,9 @@
                 </tbody>
             </table>
 
-            {{ $employees->links() }}
+            <div class="mt-3">
+                {{ $employees->links() }}
+            </div>
         </div>
     </div>
 
